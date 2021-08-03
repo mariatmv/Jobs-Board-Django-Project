@@ -1,0 +1,76 @@
+{% extends "header.html"%}
+
+{% block content %}
+
+    <!-- ***** Main Banner Area Start ***** -->
+    <div class="main-banner" id="top">
+        <video autoplay muted loop id="bg-video">
+            <source src="assets/images/video.mp4" type="video/mp4" />
+        </video>
+
+        <div class="video-overlay header-text">
+            <div class="caption">
+                <h6>Tired from your current job? Looking for new professional paths?</h6>
+                <h2>Find the perfect <em>Job</em></h2>
+                <div class="main-button">
+                    <a href="{% url 'signup' %}">Sign Up Now</a>
+                    <a href="#">Sign In Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ***** Main Banner Area End ***** -->
+
+
+    <!-- ***** Call to Action Start ***** -->
+    <section class="section section-bg" id="call-to-action" style="background-image: url(assets/images/banner-image-1-1920x500.jpg)">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 offset-lg-1">
+                    <div class="cta-content">
+                        <h2>Send us a <em>message</em></h2>
+                        <p>Ut consectetur, metus sit amet aliquet placerat, enim est ultricies ligula, sit amet dapibus odio augue eget libero. Morbi tempus mauris a nisi luctus imperdiet.</p>
+                        <div class="main-button">
+                            <a href="contact.html">Contact us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Call to Action End ***** -->
+
+    <!-- ***** Footer Start ***** -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>
+                        Copyright © 2021 <a href="">Jobs Board</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+{% endblock %}
+
+{#    <!-- jQuery -->#}
+{#    <script src="assets/js/jquery-2.1.0.min.js"></script>#}
+{##}
+{#    <!-- Bootstrap -->#}
+{#    <script src="assets/js/popper.js"></script>#}
+{#    <script src="assets/js/bootstrap.min.js"></script>#}
+{##}
+{#    <!-- Plugins -->#}
+{#    <script src="assets/js/scrollreveal.min.js"></script>#}
+{#    <script src="assets/js/waypoints.min.js"></script>#}
+{#    <script src="assets/js/jquery.counterup.min.js"></script>#}
+{#    <script src="assets/js/imgfix.min.js"></script> #}
+{#    <script src="assets/js/mixitup.js"></script> #}
+{#    <script src="assets/js/accordions.js"></script>#}
+{#    #}
+{#    <!-- Global Init -->#}
+{#    <script src="assets/js/custom.js"></script>#}
+
+  </body>
+</html>
