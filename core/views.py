@@ -6,7 +6,9 @@ from django.contrib.auth.forms import UserCreationForm
 
 
 def front_page(req):
-    return render(req, 'index.html')
+    if req.user.is_authenticated:
+        return render(req, 'index-authenticated.html')
+    return render(req, 'index-not-authenticated.html')
 
 
 def sign_up(req):
