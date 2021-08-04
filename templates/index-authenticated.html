@@ -2,20 +2,50 @@
 
 {% block content %}
 
-    <!-- ***** Main Banner Area Start ***** -->
-    <div class="main-banner" id="top">
-        <video autoplay muted loop id="bg-video">
-            <source src="assets/images/video.mp4" type="video/mp4" />
-        </video>
-
-        <div class="video-overlay header-text">
-            <div class="caption">
-                <h6>Some job offers:</h6>
+     <section class="section section-bg" id="call-to-action" style="background-image: url(assets/images/banner-image-1-1920x500.jpg)">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 offset-lg-1">
+                    <div class="cta-content">
+                        <br>
+                        <br>
+                        <h2>Our <em>Jobs</em></h2>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-    <!-- ***** Main Banner Area End ***** -->
+    </section>
 
+    <section class="section" id="trainers">
+        <div class="container">
+            <br>
+            <br>
+
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="row">
+                    {% for job in jobs %}
+                         <div class="col-md-6">
+                             <div class="trainer-item">
+                                 <div class="image-thumb">
+                                      <img src="{{ job.image_url }}" alt="">
+                                 </div>
+                                 <div class="down-content">
+                                      <span> <sup>$</sup>{{ job.wage }} </span>
+                                      <h4>{{ job.title }}</h4>
+                                      <p>{{ job.author }}</p>
+                                      <ul class="social-icons">
+                                          <li><a href="{% url 'job details' job.id %}">View More</a></li>
+                                      </ul>
+                                 </div>
+                             </div>
+                         </div>
+                    {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- ***** Footer Start ***** -->
     <footer>

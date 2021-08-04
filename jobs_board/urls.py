@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.contrib.auth import views
-from core.views import front_page, sign_up
+from core.views import front_page, sign_up, job_details
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -24,4 +24,5 @@ urlpatterns = [
     path('signup/', sign_up, name='signup'),
     path('logout/', views.LogoutView.as_view(), name='logout'),
     path('login/', views.LoginView.as_view(template_name='login.html'), name='login'),
+    path('jobs/<int:job_id>/', job_details, name='job details'),
 ]
