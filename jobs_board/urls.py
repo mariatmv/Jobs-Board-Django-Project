@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.contrib.auth import views
-from core.views import front_page, sign_up, job_details, my_offers, create_offer, edit_offer
+from core.views import front_page, sign_up, job_details, my_offers, create_offer, edit_offer, delete_offer
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -27,5 +27,6 @@ urlpatterns = [
     path('jobs/<int:job_id>/', job_details, name='job details'),
     path('my-offers/', my_offers, name='my offers'),
     path('create-offer/', create_offer, name='create offer'),
-    path('edit-job/<int:job_id>/', edit_offer, name='edit offer'),
+    path('edit-offer/<int:job_id>/', edit_offer, name='edit offer'),
+    path('delete-offer/<int:job_id>/', delete_offer, name='delete offer'),
 ]

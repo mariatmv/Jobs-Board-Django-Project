@@ -77,3 +77,14 @@ def edit_offer(req, job_id):
         form = AddJobForm(instance=job)
 
     return render(req, 'edit-offer.html', {'form': form, 'job': job, 'user': req.user})
+
+
+@login_required
+def delete_offer(req, job_id):
+    job = get_object_or_404(Job, pk=job_id, author=req.user)
+
+    if req.method == 'POST':
+        job.delete()
+        return redirect('my offers')
+
+    return render(req, 'delete-offer.html', {'job': job})

@@ -18,7 +18,7 @@
                             {% if job.author_id == user.id %}
                                 <hr>
                                 <a href="{% url 'edit offer' job.id %}" class="btn">Edit offer</a>
-                                <a href="#" class="btn">Delete offer</a>
+                                <a href="{% url 'delete offer' job.id %}" class="btn">Delete offer</a>
                             {% endif %}
                         </div>
                     </div>
