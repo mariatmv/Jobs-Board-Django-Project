@@ -1,0 +1,28 @@
+{% extends "header.html"%}
+
+{% block content %}
+       <div class="main-banner" id="top">
+        <video autoplay muted loop id="bg-video">
+            <source src="/static/images/video.mp4" type="video/mp4" />
+        </video>
+
+        <div class="video-overlay header-text">
+            <div class="caption">
+                <h2>New job offer</h2>
+                <form method="post" action=".">
+                    {% csrf_token %}
+
+                    {{ form.as_p }}
+
+                    <div class="field">
+                        <div class="control">
+                            <button class="btn btn-primary" type="submit">Create offer</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+</body>
+</html>

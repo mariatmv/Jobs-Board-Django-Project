@@ -29,13 +29,14 @@
                 <div class="col-12">
                     <nav class="main-nav">
                         <!-- ***** Logo Start ***** -->
-                        <a href="#" class="logo">Jobs<em> Board</em></a>
+                        <a href="{% url 'front page' %}" class="logo">Jobs<em> Board</em></a>
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
-                            <li><a href="{% url 'front page' %}" class="active">Home</a></li>
-                            <li><a href="#">Jobs</a></li>
+                            <li><a href="{% url 'front page' %}">Jobs</a></li>
                             {% if request.user.is_authenticated %}
+                                <li><a href="{% url 'create offer' %}">Create offer</a></li>
+                                <li><a href="{% url 'my offers' %}">My offers</a></li>
                                 <li><a href="{% url 'logout' %}">Logout</a></li>
                             {% endif %}
                         </ul>
