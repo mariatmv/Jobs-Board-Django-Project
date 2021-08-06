@@ -15,6 +15,9 @@
                     {{ form.as_p }}
 
                     <div class="field">
+                        {% if message %}
+                            <p style="color:red; background-color:black">{{ message }}</p>
+                        {% endif %}
                         <div class="control">
                             <button class="btn btn-primary" type="submit">Create offer</button>
                         </div>

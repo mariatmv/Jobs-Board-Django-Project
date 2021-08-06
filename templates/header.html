@@ -33,11 +33,15 @@
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
-                            <li><a href="{% url 'front page' %}">Jobs</a></li>
+                            <li><a href="{% url 'recent jobs' %}">Recent Jobs</a></li>
                             {% if request.user.is_authenticated %}
+                                <li><a href="{% url 'front page' %}">Jobs</a></li>
                                 <li><a href="{% url 'create offer' %}">Create offer</a></li>
                                 <li><a href="{% url 'my offers' %}">My offers</a></li>
                                 <li><a href="{% url 'logout' %}">Logout</a></li>
+                            {% else %}
+                                <li><a href="{% url 'signup' %}">Sign Up</a></li>
+                                <li><a href="{% url 'login' %}">Sign In</a></li>
                             {% endif %}
                         </ul>
                         <a class='menu-trigger'>
