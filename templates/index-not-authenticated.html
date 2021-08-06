@@ -10,11 +10,18 @@
 
         <div class="video-overlay header-text">
             <div class="caption">
-                <h6>Tired from your current job? Looking for new professional paths?</h6>
-                <h2>Find the perfect <em>Job</em></h2>
+                <h2>Looking for <em>job</em> or <em>employee?</em></h2>
+                <h6>Sign up/in to view all offers or publish your own</h6>
+                <hr>
                 <div class="main-button">
                     <a href="{% url 'signup' %}">Sign Up Now</a>
                     <a href="{% url 'login' %}">Sign In Now</a>
+                </div>
+                <hr>
+                <h6>or view our most recent job offers</h6>
+                <hr>
+                <div class="main-button">
+                    <a href="{% url 'recent jobs' %}">Recent jobs</a>
                 </div>
             </div>
         </div>
