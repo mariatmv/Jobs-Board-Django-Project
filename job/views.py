@@ -11,7 +11,6 @@ from job.models import Job
 
 
 class RecentJobsView(View):
-    template_name = 'recent_jobs.html'
 
     def get(self, req, *args, **kwargs):
         jobs = Job.objects.all().order_by('-id')[:3][::-1]
