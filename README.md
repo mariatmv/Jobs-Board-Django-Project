@@ -5,7 +5,7 @@ Jobs Board is a website, where you can find job offers or even post your own.
 ## Description
 
 This is a Django template project. 
-When you visit the site for the first time you'll end up on the unauthorized landing page. From here you can register/login or choose to see the latest job offers (only 3 offers). To have the full functionality you're going to need a profile. Anyone can register on the site. From there you'll have the pages for all jobs, recent jobs (again) and a page to view your own job offers that you've published. You can click on any offer to open it's details page and then click on the "Click for contact details" button to see the contact info for this offer. You can also got to "Create offer" and publish your very own job offer - you'll have to provide a title, short and long descriptions, image url, salary and contact info.
+When you visit the site for the first time you'll end up on the unauthorized landing page. From here you can register/login or choose to see the latest job offers (only 3 offers). To have the full functionality you're going to need a profile. Anyone can register on the site. From there you'll have the pages for all jobs, recent jobs (again) and a page to view your own job offers that you've published. You can click on any offer to open it's details page and then click on the "Click for contact details" button to see the contact info for this offer. You can also got to "Create offer" and publish your very own job offer - you'll have to provide a title, short and long descriptions, image url, salary and contact info. Once you publish it, you can also edit it afterwards or delete it if you want.
 
 
 ## Getting Started
